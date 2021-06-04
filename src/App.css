@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.header {
+    padding: 0 150px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer {
+    margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+    min-height: calc(100vh - 70px - 64px);
+    padding: 1.5rem 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.goods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
 }
+.card {
+    display: flex;
+    flex-direction: column;
 
-.App-link {
-  color: #61dafb;
 }
+.card-content {
+    flex-grow: 1;
+}
+.cart {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 5;
+    padding: 1rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+@media (min-width: 767px) {
+    .cart {
+        top: 5rem;
+        bottom: unset;
+    }
+}
+.basket-list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 50rem;
+    max-width: 95%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.basket-close {
+    cursor: pointer; 
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #ffffff;
+}
+.basket-delite {
+    cursor: pointer;
+}
+.basket-quantity {
+    cursor: pointer;
+    vertical-align: middle;
+    color: #26a69a;
+}
+.basketList-btn {
+    margin: 10px;
 }
